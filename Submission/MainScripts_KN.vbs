@@ -16,7 +16,7 @@ Attribute VB_Name = "MainScripts"
 ' - KN
 '--------------------------------------------------------------------
 
-Sub btInit_Click()
+Sub RunStepOne()
     ' Dim variables
     ' ---------------------------------------
     Dim i As Integer
@@ -206,14 +206,24 @@ Sub btInit_Click()
     ' Comment out this conditional section if not using
     ' -------------------------------------------------
     Worksheets("Controller").Range("F17").Value = "Done!"
+    Worksheets("Controller").Cells(25, 5).Value = True
 End Sub
 
-Sub GetTopTickers()
+Sub RunStepTwo()
     ' Dim variables
     ' -------------
     Dim i, j As Integer
     Dim colCount, rowCount As Long
     Dim Ticker(2, 1) As Variant
+    
+    ' For "Controller" - Verify if Step One script
+    ' has been run first else exit sub. Comment
+    ' out if not using the controller sheet.
+    ' --------------------------------------------
+    If Worksheets("Controller").Cells(25, 5).Value <> "True" Then
+        MsgBox "Unable to start Step Two since Step One has not completed yet!", vbCritical, ""
+        Exit Sub
+    End If
     
     ' Start worksheet loop
     ' --------------------
@@ -300,4 +310,3 @@ Sub GetTopTickers()
     Next i
     
 End Sub
-
