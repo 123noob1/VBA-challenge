@@ -1,6 +1,8 @@
 # VBA-challenge
 # Note to Graders:
-- Two scripts, RunStepOne() and RunStepTwo(), were created for this exercise. First script inserts all required columns then performs first set of calculation for each unique ticker for each worksheet via loop functions. Second script validates that the first script has been run prior to loop through all worksheets and perform the second set of calculation for top tickers.
-- A Controller sheet was added for sake of fun on code practicing and monitoring so I don't have to look at the spinning wheel only while waiting for 5 minutes or more for scripts to complete [see snippet "Controller.png"]. Additionally, it's where I note down the formulas needed to use in the first step calculations for yearly change, percent change, and total vol per ticker.
-- Both scripts are executed via two buttons located on the Controller sheet.
-- See Submission folder for the source code file name "MainScripts_KN.vbs" and snippet of result files.
+- Please refer to the Submission folder for the following files:
+    - <b>Module1.bas</b> - this is the file containing the source code to run the calculations.
+    - <b>MyOutput_2018.png</b> - this is the output screenshot for the year 2018 tab.
+    - <b>MyOutput_2019.png</b> - this is the output screenshot for the year 2019 tab.
+    - <b>MyOutput_2020.png</b> - this is the output screenshot for the year 2020 tab.
+- Two subs were created for this assignment: PartOne() and PartTwo(). Please run PartOne() first prior to run PartTwo() to get the proper output as shown in the result screenshots.
